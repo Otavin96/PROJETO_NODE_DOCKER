@@ -1,0 +1,19 @@
+{
+  "name": "projeto_node_docker",
+  "version": "1.0.0",
+  "description": "Projeto de estudo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/common/infrastructure/http/server.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "projeto_node_docker": "file:",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}
