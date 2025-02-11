@@ -2,18 +2,23 @@
   "name": "projeto_node_docker",
   "version": "1.0.0",
   "description": "Projeto de estudo",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "dev": "npx ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/common/infrastructure/http/server.ts"
+    "dev": "npx ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --watch src src/common/infrastructure/http/server.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "projeto_node_docker": "file:",
     "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
-    "@types/express": "^5.0.0"
+    "@types/express": "^5.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
   }
 }

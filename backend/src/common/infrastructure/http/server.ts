@@ -1,6 +1,10 @@
-import { app } from '@/common/infrastructure/http/app'
+import { app } from "../http/app";
+import dotenv from "dotenv";
 
+dotenv.config();
 
-app.listen(3000, () => {
-    console.log("Servidor online!!!")
-})
+const port = process.env.PORT;
+
+app.listen(port, () => {
+  console.log("Servidor online!!!");
+});
